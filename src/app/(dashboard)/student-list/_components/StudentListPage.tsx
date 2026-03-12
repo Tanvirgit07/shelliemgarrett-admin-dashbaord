@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import Image from "next/image";
 import { useSession } from "next-auth/react";
+import { ViewStudentModal } from "./ViewStudentModal";
 
 // ── Types ──────────────────────────────────────────────
 interface Campaign {
@@ -47,24 +48,7 @@ interface ApiResponse {
   };
 }
 
-// ── Icons ──────────────────────────────────────────────
-function EyeIcon() {
-  return (
-    <svg
-      width="17"
-      height="17"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-      <circle cx="12" cy="12" r="3" />
-    </svg>
-  );
-}
+// ── Icons ─────────────────────────────────────────────
 
 function ChevronLeft() {
   return (
@@ -272,12 +256,13 @@ function StudentListPage() {
 
                   {/* Action */}
                   <td className="px-4 py-4 text-center">
-                    <button
+                    {/* <button
                       aria-label="View"
-                      className="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-[#00000014] text-gray-500 hover:text-blue-600 hover:border-blue-400 hover:bg-blue-50 transition-colors cursor-pointer"
-                    >
+                      className="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-[#] text-gray-500 hover:text-blue-600 hover:border-blue-400 hover:bg-blue-50 transition-colors cursor-pointer"
+                    >00000014
                       <EyeIcon />
-                    </button>
+                    </button> */}
+                    <ViewStudentModal id = {student?.studentId} />
                   </td>
                 </tr>
               ))
