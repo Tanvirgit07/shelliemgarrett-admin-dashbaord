@@ -61,31 +61,30 @@ export function Sidebar() {
       >
         {/* Header with Logo - Logo সবসময় center এ */}
         <div className="h-[80px] flex items-center justify-center relative px-4">
-          <div className="mt-5">
-            <Image
-              src="/images/logo.png" // 👉 তোমার logo path
-              alt="Logo"
-              width={120}
-              height={40}
-              priority
-              className="object-contain"
-            />
-          </div>
+  <div className="relative mt-5 h-[80px] w-[150px]">
+    <Image
+      src="/images/mainLogo.png"
+      alt="Logo"
+      fill
+      priority
+      className="object-contain"
+    />
+  </div>
 
-          {/* Close Button */}
-          {isMobileMenuOpen && (
-            <button
-              onClick={toggleMobileMenu}
-              className="lg:hidden absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-lg text-white hover:bg-slate-600/50 transition-colors"
-              aria-label="Close menu"
-            >
-              <X className="h-6 w-6" />
-            </button>
-          )}
-        </div>
+  {/* Close Button */}
+  {isMobileMenuOpen && (
+    <button
+      onClick={toggleMobileMenu}
+      className="lg:hidden absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-lg text-white hover:bg-slate-600/50 transition-colors"
+      aria-label="Close menu"
+    >
+      <X className="h-6 w-6" />
+    </button>
+  )}
+</div>
 
         {/* Navigation */}
-        <nav className="flex-1 space-y-2 flex flex-col items-center justify-start px-3 overflow-y-auto mt-7">
+        <nav className="flex-1 space-y-2 flex flex-col items-center justify-start px-3 overflow-y-auto mt-10">
           {navigation.map((item) => {
             const isActive =
               pathname === item.href ||
