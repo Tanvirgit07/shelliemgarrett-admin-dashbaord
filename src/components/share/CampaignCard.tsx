@@ -95,6 +95,11 @@ export function CampaignCard({
               "Delete"
             )}
           </button>
+          <Link href={`/edit-campain/${id}`}>
+            <button className="flex items-center justify-center gap-1.5 border-2 border-red-400 text-red-400 hover:bg-red-50 transition-colors px-4 py-2 rounded-md font-medium disabled:opacity-60 disabled:cursor-not-allowed">
+              Edit
+            </button>
+          </Link>
         </div>
       </div>
     </div>

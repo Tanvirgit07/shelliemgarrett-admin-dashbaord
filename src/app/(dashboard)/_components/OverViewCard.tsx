@@ -6,6 +6,7 @@ import React from "react";
 import cardImage1 from "@../../../public/images/cardImage1.png";
 import cardImage2 from "@../../../public/images/cardImage2.png";
 import cardIamge3 from "@../../../public/images/cardImage3.png";
+import cardIamge4 from "@../../../public/images/cardImage4.png";
 
 function OverViewCard() {
   const session = useSession();
@@ -134,7 +135,7 @@ function OverViewCard() {
             </div>
             <div className="w-14 h-14 relative">
               <Image
-                src="/images/cardImage4.png"
+                src={cardIamge4}
                 alt="Guest Users"
                 fill
                 className="object-contain"
